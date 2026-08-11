@@ -10,6 +10,7 @@ export const succession_container = {
     },
 };
 
+
 export const grow_in_item = {
     hidden: {opacity: 0, scale: 0},
     visible: {
