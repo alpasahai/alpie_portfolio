@@ -1,7 +1,4 @@
-/* src/index.css */
 @import url('https://fonts.googleapis.com/css2?family=Italiana&family=Inika:wght@400;700&display=swap');
-/* Freehand isn't on Google Fonts - if you got it from elsewhere (e.g. dafont), 
-   drop the .ttf/.woff in src/assets/fonts and @font-face it below */
 @font-face {
   font-family: 'Freehand';
   src: url('./assets/fonts/Freehand.woff2') format('woff2');
@@ -11,6 +8,7 @@
 @tailwind components;
 @tailwind utilities;
 
+/*The bases*/
 body {
   background-color: #4B0A13;
   color: #D39AA6;
