@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import Navbar from "../components/Navbar";
-import { succession_container, grow_in_item, pan_left } from "../utilities/animations";
+import { succession_container, grow_in_item, pan_left } from "../utilities/animation";
 
 //Project Line-up: name, lang, image, github link
 const projects = [

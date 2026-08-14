@@ -24,7 +24,7 @@ export const grow_in_item = {
 export const shimmy = {
     whileHover: {
         rotate: [0, -6, 6, -4, 4, 0], 
-        transition: {duration: 0.5},
+        transition: {duration: 1},
     },
 };
 

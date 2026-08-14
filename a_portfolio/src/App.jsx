@@ -1,8 +1,8 @@
 import { Routes, Route } from "react-router-dom";
-import MainPage from "./pages/MainPage";
-import KeySkillsAboutMe from "./pages/KeySkillsAboutMe";
-import ProjectsPage from "./pages/ProjectsPage";
-import ContactPage from "./pages/ContactPage";
+import MainPage from "./pages/main_page";
+import KeySkillsAboutMe from "./pages/key_skills_abt_me";
+import ProjectsPage from "./pages/projects";
+import ContactPage from "./pages/contact_me";
 
 function App() {
   return (

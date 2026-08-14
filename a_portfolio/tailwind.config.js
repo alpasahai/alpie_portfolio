@@ -12,7 +12,7 @@ export default {
       fontFamily: {
         nav: ['Italiana', 'serif'],
         body: ['Inika', 'serif'],
-        heading: ['Freehand', 'cursive'],
+        heading: ['Satisfy', 'cursive'],
       },
     },
   },

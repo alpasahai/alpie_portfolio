@@ -6,7 +6,7 @@ import {
   shimmy,
   pan_left,
   pan_right,
-} from "../utilities/animations";
+} from "../utilities/animation";
 
 import dark_comp from "../design_elements/dark_comp.png";
 import ks_card from "../design_elements/ks_card.png";

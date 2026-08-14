@@ -17,94 +17,129 @@ import facecard from "../design_elements/facecard.png";
 
 export default function MainPage() {
   return (
-    <div className="min-h-screen bg-maroon">
+    <div className="min-h-screen bg-maroon flex flex-col">
       <Navbar />
-
       <motion.div
         variants={succession_container}
         initial="hidden"
         animate="visible"
-        className="relative h-[70vh] max-w-5xl mx-auto"
+        className="relative w-full max-w-[1440px] aspect-[16/9] mx-auto"
       >
-        {/*title*/}
+        {/*MAIN TITLE*/}
         <motion.h1
           variants={grow_in_item}
-          className="font-heading text-6xl text-blush absolute top-10 left-1/3"
+          className="font-heading text-[clamp(4rem,8vw,8rem)] text-blush absolute z-20"
+          style={{ top: "30%", left: "30%" }}
         >
-          alpie<br />portfolio
+          alpie
         </motion.h1>
 
-        {/*For each item: grow in on load PLUS shimmy on hover*/}
-        {/*TO BE REPOSITIONED PROPERLY*/}
+        <motion.h1
+          variants={grow_in_item}
+          className="font-heading text-[clamp(4rem,8vw,8rem)] text-blush absolute z-20"
+          style={{ top: "40%", left: "40%" }}
+        >
+          portfolio
+        </motion.h1>
+
+        {/*THE LITTLE PICTURES*/}
         <motion.img
           src={ticket}
           variants={grow_in_item}
           whileHover={shimmy}
-          className="absolute top-0 left-0 w-52"
+          className="absolute z-10 w-[28%]"
+          style={{ top: "4%", left: "3%" }}
         />
-        <motion.img
-          src={frangipani}
-          variants={grow_in_item}
-          whileHover={shimmy}
-          className="absolute top-24 left-72 w-36"
-        />
-        <motion.img
-          src={beads}
-          variants={grow_in_item}
-          whileHover={shimmy}
-          className="absolute top-56 left-8 w-44"
-        />
-        <motion.img
-          src={brush}
-          variants={grow_in_item}
-          whileHover={shimmy}
-          className="absolute top-64 left-64 w-28"
-        />
-        <motion.img
-          src={gloves}
-          variants={grow_in_item}
-          whileHover={shimmy}
-          className="absolute top-56 left-96 w-32"
-        />
-        <motion.img
-          src={hibiscus}
-          variants={grow_in_item}
-          whileHover={shimmy}
-          className="absolute top-56 left-96 w-32"
-        />
-        <motion.img
-          src={jhumka}
-          variants={grow_in_item}
-          whileHover={shimmy}
-          className="absolute top-56 left-96 w-32"
-        />   
-        <motion.img
-          src={ribbon}
-          variants={grow_in_item}
-          whileHover={shimmy}
-          className="absolute top-56 left-96 w-32"
-        /> 
+
         <motion.img
           src={sketch}
           variants={grow_in_item}
           whileHover={shimmy}
-          className="absolute top-56 left-96 w-32"
-        />            
+          className="absolute z-10 w-[13%]"
+          style={{ top: "4%", left: "27%" }}
+        />
+
         <motion.img
-          src={volleyball}
+          src={frangipani}
           variants={grow_in_item}
           whileHover={shimmy}
-          className="absolute top-60 left-[32rem] w-20"
+          className="absolute z-10 w-[17%]"
+          style={{ top: "12%", left: "70%" }}
         />
+
+        <motion.img
+          src={ribbon}
+          variants={grow_in_item}
+          whileHover={shimmy}
+          className="absolute z-10 w-[9%]"
+          style={{ top: "29%", left: "37%" }}
+        />
+        
+        <motion.img
+          src={hibiscus}
+          variants={grow_in_item}
+          whileHover={shimmy}
+          className="absolute z-10 w-[17%]"
+          style={{ top: "38%", left: "4%" }}
+        />
+
         <motion.img
           src={facecard}
           variants={grow_in_item}
           whileHover={shimmy}
-          className="absolute top-56 left-96 w-32"
+          className="absolute z-10 w-[20%]"
+          style={{ top: "51%", left: "10%" }}
+        />
+
+        <motion.img
+          src={beads}
+          variants={grow_in_item}
+          whileHover={shimmy}
+          className="absolute z-10 w-[15%]"
+          style={{ top: "63%", left: "27%" }}
+        />
+
+        <motion.img
+          src={gloves}
+          variants={grow_in_item}
+          whileHover={shimmy}
+          className="absolute z-10 w-[17%]"
+          style={{ top: "58%", left: "40%" }}
+        />
+
+        <motion.img
+          src={jhumka}
+          variants={grow_in_item}
+          whileHover={shimmy}
+          className="absolute z-10 w-[11%]"
+          style={{ top: "50%", left: "35%" }}
+        />
+
+        <motion.img
+          src={volleyball}
+          variants={grow_in_item}
+          whileHover={shimmy}
+          className="absolute z-10 w-[10%]"
+          style={{ top: "49%", left: "70%" }}
+        />
+
+        <motion.img
+          src={brush}
+          variants={grow_in_item}
+          whileHover={shimmy}
+          className="absolute z-10 w-[27%]"
+          style={{
+            top: "64%",
+            left: "48%",
+            transform: "rotate(-25deg)"
+          }}
         />
       </motion.div>
 
-      <p className="text-center font-body text-blush pb-4">@alpie productions</p>
+      {/*Making sure that the footer is at the bottom*/}
+      <p className="text-right font-body text-blush pb-6 pr-10 mt-auto">
+        @alpie productions
+      </p>
     </div>
   );
 }

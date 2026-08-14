@@ -1,8 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Italiana&family=Inika:wght@400;700&display=swap');
-@font-face {
-  font-family: 'Freehand';
-  src: url('./assets/fonts/Freehand.woff2') format('woff2');
-}
+/*@import url('https://fonts.googleapis.com/css2?family=Italiana&family=Inika:wght@400;700&display=swap');
+*/
+@import url('https://fonts.googleapis.com/css2?family=Italiana&family=Inika:wght@400;700&family=Satisfy&display=swap');
 
 @tailwind base;
 @tailwind components;
