@@ -5,6 +5,7 @@ import { succession_container, grow_in_item, shimmy } from "../utilities/animati
 //alpie's pretty little drawings
 import ticket from "../design_elements/ticket.png";
 import frangipani from "../design_elements/frangipani.png";
+import frangipani_2 from "../design_elements/frangipani_2.png";
 import beads from "../design_elements/beads.png";
 import brush from "../design_elements/brush.png";
 import gloves from "../design_elements/gloves.png";
@@ -15,20 +16,20 @@ import sketch from "../design_elements/sketch.png";
 import volleyball from "../design_elements/volleyball.png";
 import facecard from "../design_elements/facecard.png";
 
-//Where every drawing lives on the canvas (all % of the canvas)
-//tilt = how much it leans in degrees
+//map for all the drawings:
 const drawings = [
-  { src: ribbon,     alt: "ribbon",          top: 4,  left: 38, width: 13, tilt: 0 },
-  { src: ticket,     alt: "travel ticket",   top: 14, left: 17, width: 17, tilt: -12 },
-  { src: sketch,     alt: "alpie sketch",    top: 8,  left: 50, width: 9,  tilt: 6 },
-  { src: brush,      alt: "paint brush",     top: 10, left: 57, width: 14, tilt: -40 },
-  { src: frangipani, alt: "frangipani",      top: 22, left: 66, width: 13, tilt: 0 },
-  { src: hibiscus,   alt: "hibiscus",        top: 38, left: 11, width: 11, tilt: 0 },
-  { src: facecard,   alt: "polaroid of alpie", top: 52, left: 21, width: 13, tilt: -8 },
-  { src: jhumka,     alt: "jhumka earrings", top: 66, left: 38, width: 7,  tilt: 0 },
-  { src: beads,      alt: "name beads",      top: 64, left: 46, width: 15, tilt: -4 },
-  { src: gloves,     alt: "boxing gloves",   top: 70, left: 58, width: 9,  tilt: 8 },
-  { src: volleyball, alt: "volleyball",      top: 60, left: 69, width: 8,  tilt: 0 },
+  { src: ticket,       alt: "travel ticket",     top: 0,  left: 21, width: 25, tilt: 0 },
+  { src: sketch,       alt: "alpie sketch",      top: 1,  left: 50, width: 16, tilt: 0 },
+  { src: brush,        alt: "paint brush",       top: 1,  left: 60, width: 18, tilt: -15 },
+  { src: ribbon,       alt: "ribbon",            top: 1,  left: 35, width: 29, tilt: 0 },
+  { src: frangipani,   alt: "frangipani",        top: 12, left: 65, width: 19, tilt: 0 },
+  { src: frangipani_2, alt: "pink frangipani",   top: 36, left: 75, width: 9,  tilt: 0 },
+  { src: hibiscus,     alt: "hibiscus",          top: 31, left: 11, width: 20, tilt: 0 },
+  { src: facecard,     alt: "polaroid of alpie", top: 55, left: 21, width: 17, tilt: 15 },
+  { src: jhumka,       alt: "jhumka earrings",   top: 62, left: 36, width: 17, tilt: 0 },
+  { src: gloves,       alt: "boxing gloves",     top: 60, left: 53, width: 16, tilt: 0 },
+  { src: beads,        alt: "name beads",        top: 53, left: 62, width: 25, tilt: -5 },
+  { src: volleyball,   alt: "volleyball",        top: 68, left: 72, width: 13, tilt: 0 },
 ];
 
 export default function MainPage() {
@@ -36,31 +37,30 @@ export default function MainPage() {
     <div className="min-h-screen bg-maroon flex flex-col">
       <Navbar />
 
-      {/*THE CANVAS - always 16:9, but never taller than the screen*/}
       <motion.div
         variants={succession_container}
         initial="hidden"
         animate="visible"
-        className="relative mx-auto aspect-[16/9] w-[min(100%,calc((100vh-170px)*16/9))] [container-type:inline-size]"
+        className="relative mx-auto aspect-[2/1] w-[min(100%,calc((100vh-170px)*2))] [container-type:inline-size]"
       >
-        {/*MAIN TITLE - cqw = % of the canvas width, so it shrinks with the drawings*/}
+        {/*MAIN TITLE*/}
         <motion.h1
           variants={grow_in_item}
-          className="font-heading text-blush absolute z-20 text-[11cqw] leading-none"
-          style={{ top: "33%", left: "28%" }}
+          className="font-heading text-rose absolute z-20 text-[10.5cqw] leading-none"
+          style={{ top: "26%", left: "31%" }}
         >
           alpie
         </motion.h1>
 
         <motion.h1
           variants={grow_in_item}
-          className="font-heading text-blush absolute z-20 text-[8cqw] leading-none"
-          style={{ top: "47%", left: "40%" }}
+          className="font-heading text-rose absolute z-20 text-[10.5cqw] leading-none"
+          style={{ top: "40%", left: "39%" }}
         >
           portfolio
         </motion.h1>
 
-        {/*THE LITTLE PICTURES*/}
+        {/*the doodles shimmy*/}
         {drawings.map((d) => (
           <motion.img
             key={d.alt}
