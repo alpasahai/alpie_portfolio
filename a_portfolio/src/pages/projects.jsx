@@ -31,7 +31,9 @@ export default function ProjectsPage() {
           className="w-1/4"
         >
           <h2 className="font-heading text-5xl text-blush mb-4">the<br />projects</h2>
-          <p className="font-body text-blush text-sm">Lorem ipsum dolor sit amet...</p>
+          <p className="font-body text-blush text-sm leading-relaxed">
+            Welcome to my little wall of work! These are the projects I've built across my degree, from low-level systems in C, like a real-time operating system and a device driver, to full-stack and mobile apps in JavaScript and TypeScript. You'll also find team projects like ATLAS and our WFEO hackathon entry, where collaboration was just as important as the code. Each project taught me something new, whether that was debugging hardware, designing for real users or working as part of a team. Click on any polaroid to head straight to its GitHub and see how it all works under the hood. This wall is always growing, so check back for what I'm building next!
+          </p>
         </motion.div>
 
         <motion.div

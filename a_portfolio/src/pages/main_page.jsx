@@ -19,17 +19,18 @@ import facecard from "../design_elements/facecard.png";
 //map for all the drawings:
 const drawings = [
   { src: ticket,       alt: "travel ticket",     top: 0,  left: 21, width: 25, tilt: 0 },
-  { src: sketch,       alt: "alpie sketch",      top: 1,  left: 50, width: 16, tilt: 0 },
+  // { src: sketch,       alt: "alpie sketch",      top: 1,  left: 50, width: 16, tilt: 0 },
   { src: brush,        alt: "paint brush",       top: 1,  left: 60, width: 18, tilt: -15 },
   { src: ribbon,       alt: "ribbon",            top: 1,  left: 35, width: 29, tilt: 0 },
+  { src: sketch,       alt: "alpie sketch",      top: 1,  left: 50, width: 16, tilt: 0 },
   { src: frangipani,   alt: "frangipani",        top: 12, left: 65, width: 19, tilt: 0 },
   { src: frangipani_2, alt: "pink frangipani",   top: 36, left: 75, width: 9,  tilt: 0 },
-  { src: hibiscus,     alt: "hibiscus",          top: 31, left: 11, width: 20, tilt: 0 },
   { src: facecard,     alt: "polaroid of alpie", top: 55, left: 21, width: 17, tilt: 15 },
   { src: jhumka,       alt: "jhumka earrings",   top: 62, left: 36, width: 17, tilt: 0 },
   { src: gloves,       alt: "boxing gloves",     top: 60, left: 53, width: 16, tilt: 0 },
   { src: beads,        alt: "name beads",        top: 53, left: 62, width: 25, tilt: -5 },
   { src: volleyball,   alt: "volleyball",        top: 68, left: 72, width: 13, tilt: 0 },
+  { src: hibiscus,     alt: "hibiscus",          top: 31, left: 11, width: 20, tilt: 0 },
 ];
 
 export default function MainPage() {

@@ -9,7 +9,7 @@ const links = [
 
 export default function Navbar() {
   return (
-    <nav className="flex justify-center items-center gap-10 py-8 font-nav text-blush text-lg tracking-wide">
+    <nav className="flex justify-center items-center gap-10 py-8 font-nav text-blush text-2xl tracking-wide">
       {links.map((link, index) => (
         <div key={link.name} className="flex items-center gap-10">
           <Link
