@@ -3,7 +3,6 @@
 # ✿ alpie portfolio ✿
 *a little corner of the internet for my projects, my skills, and the things I love*
 </div>
----
 
 ## What is this?
 
@@ -22,7 +21,7 @@ It's dark maroon, it's polaroids, it's hibiscus and frangipani and boxing gloves
 
 ## Designing:
 
-Everything started in **Figma**, then got sketched out by hand before a single line of code.
+Everything started as a sketch on the iPad and then headed to **Figma** before a single line of code.
 
 | colour | hex | used for |
 |---|---|---|
