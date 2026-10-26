@@ -2,6 +2,19 @@ import { motion } from "framer-motion";
 import Navbar from "../components/Navbar";
 import { succession_container, grow_in_item, shimmy } from "../utilities/animation";
 
+//alpie's pretty little drawings
+import ticket from "../design_elements/ticket.png";
+import frangipani from "../design_elements/frangipani.png";
+import beads from "../design_elements/beads.png";
+import brush from "../design_elements/brush.png";
+import gloves from "../design_elements/gloves.png";
+import hibiscus from "../design_elements/hibiscus.png";
+import jhumka from "../design_elements/jhumka.png";
+import ribbon from "../design_elements/ribbon.png";
+import sketch from "../design_elements/sketch.png";
+import volleyball from "../design_elements/volleyball.png";
+import facecard from "../design_elements/facecard.png";
+
 //Where every drawing lives on the canvas (all % of the canvas)
 //tilt = how much it leans in degrees
 const drawings = [
