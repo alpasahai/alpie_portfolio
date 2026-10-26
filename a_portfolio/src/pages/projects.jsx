@@ -4,15 +4,18 @@ import { succession_container, grow_in_item, pan_left } from "../utilities/anima
 
 //Project Line-up: name, lang, image, github link
 const projects = [
-  { name: "Project Name", lang: "React", image: "../design_elements/facecard.png", github: "https://www.google.com/maps" },
-  { name: "Project Name", lang: "React", image: "../design_elements/facecard.png", github: "https://www.google.com/maps" },
-  { name: "Project Name", lang: "React", image: "../design_elements/facecard.png", github: "https://www.google.com/maps" },
-  { name: "Project Name", lang: "React", image: "../design_elements/facecard.png", github: "https://www.google.com/maps" },
-  { name: "Project Name", lang: "React", image: "../design_elements/facecard.png", github: "https://www.google.com/maps" },
-  { name: "Project Name", lang: "React", image: "../design_elements/facecard.png", github: "https://www.google.com/maps" },
-  { name: "Project Name", lang: "React", image: "../design_elements/facecard.png", github: "https://www.google.com/maps" },
-  { name: "Project Name", lang: "React", image: "../design_elements/facecard.png", github: "https://www.google.com/maps" },
-  { name: "Project Name", lang: "React", image: "../design_elements/facecard.png", github: "https://www.google.com/maps" },
+  { name: "Fabulari: Chat Application", lang: "TypeScript & JavaScript", image: "../design_elements/facecard.png", github: "https://github.com/alpasahai/full_stack_dev_fabulari_chat.git" },
+  { name: "Real-time Operating System", lang: "C", image: "../design_elements/facecard.png", github: "https://github.com/alpasahai/advanced_comp_sys_RTOS.git" },
+  { name: "Device Driver", lang: "C", image: "../design_elements/facecard.png", github: "https://github.com/alpasahai/advanced_comp_sys_Device_Driver.git" },
+  { name: "Ultrasonic Radar", lang: "C", image: "../design_elements/facecard.png", github: "https://github.com/alpasahai/embedded_systems_ultrasonic_radar_2025.git" },
+  { name: "To Do List Application", lang: "JavaScript", image: "../design_elements/facecard.png", github: "https://github.com/alpasahai/mobile_app_development_assignment_1.git" },
+  { name: "Fake Store Application", lang: "JavaScript", image: "../design_elements/facecard.png", github: "https://github.com/alpasahai/mobile_app_development_assignment_2.git" },
+  { name: "Te Kowhai Dictionary", lang: "PHP & SQL Databases", image: "../design_elements/facecard.png", github: "https://github.com/alpasahai/te_kowhai_maori_dictionary.git" },
+  { name: "ATLAS (Team Project)", lang: "Python", image: "../design_elements/facecard.png", github: "https://github.com/alpasahai/programming_robotics_project.git" },
+  { name: "Diamond Encryption", lang: "C++", image: "../design_elements/facecard.png", github: "https://github.com/alpasahai/object_oriented_programming_encryption.git" },
+  { name: "GU Keep 'Em", lang: "C", image: "../design_elements/facecard.png", github: "https://github.com/alpasahai/engineering_c_GU_Keep_Em.git" },
+  { name: "Battles of Galactica", lang: "p5.js", image: "../design_elements/facecard.png", github: "https://github.com/alpasahai/creative_coding_battles_of_galactica.git" },
+  { name: "Octopods: WFEO Hackathon (Team Project)", lang: "Hackathon", image: "../design_elements/facecard.png", github: "https://lnkd.in/p/gweatFPT" },
 ];
 
 export default function ProjectsPage() {
