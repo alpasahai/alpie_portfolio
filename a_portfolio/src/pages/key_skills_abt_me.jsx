@@ -16,7 +16,7 @@ export default function KeySkillsAboutMe() {
       <Navbar />
 
       {/*3 columns like the OG design: skills | polaroid | about me*/}
-      <div className="flex-1 w-full max-w-7xl mx-auto grid grid-cols-[1.2fr_1.1fr_1.2fr] gap-10 px-12 py-6">
+      <div className="flex-1 w-full max-w-7.5xl mx-auto grid grid-cols-[1.2fr_1.1fr_1.2fr] gap-10 px-12 py-6">
 
         {/*COLUMN 1 - Key Skills come in frm the left*/}
         <motion.div initial="hidden" animate="visible" variants={pan_left} className="flex flex-col">
@@ -24,12 +24,12 @@ export default function KeySkillsAboutMe() {
 
           <h3 className="font-nav text-rose text-xl mb-1">• programming</h3>
           <p className="font-body text-blush text-[13px] leading-normal mb-5 pl-4">
-            My programming journey runs all the way from the hardware up to the user. I'm most at home in C and C++, where I've built a real-time operating system, a device driver, an embedded ultrasonic radar and an object-oriented encryption program. On the software side, I work with JavaScript, TypeScript, Python, PHP and SQL, creating everything from a full-stack chat application and mobile apps to a Māori dictionary and a team robotics project. This portfolio is built with React, Vite, Tailwind CSS and Framer Motion, designed from my own sketches in Figma. I use Git and GitHub for every project and love understanding how things work under the hood, from how a system schedules its tasks to how a user feels when they click a button.
+            With programming, I have gained an interest in the embedded software side of the world. To explore that, I've built a real-time operating system, a device driver and an embedded ultrasonic radar, all in the C language. On the software side, I work with JavaScript, TypeScript, Python, dabbling in PHP, creating everything from a full-stack chat application and mobile apps to a Māori dictionary and a team robotics project. This portfolio is built with React, Vite, Tailwind CSS and Framer Motion, designed from my own sketches in Figma. I use Git and GitHub for the majority of my projects (version control is ESSENTIAL) and love understanding how things work under the hood, from how a system schedules its tasks to how a user feels when they click a button.
           </p>
 
           <h3 className="font-nav text-rose text-xl mb-1">• soft skills</h3>
           <p className="font-body text-blush text-[13px] leading-normal pl-4">
-            Leadership and community are at the heart of who I am. As the ex-Vice President of Women in Engineering (WiE) and a Senior Mentor for Women in Science and Engineering (WiSE) at Griffith, I've helped lead and organise large-scale events like the annual Engineering Gala and industry networking nights, which takes communication, organisation and a lot of teamwork. Through team projects and hackathons, I've learnt how to collaborate under pressure, share ideas openly and bring out the best in the people around me. Cultural dance, yoga and Muay Thai have taught me resilience, discipline and adaptability, and growing up in Fiji has given me an open mind and a love for connecting with people from all walks of life. I'm passionate about mentoring others and supporting diversity in STEM.
+            Leadership, teamwork and communication make up a lot of “Alpa Sahai”. As the ex-Vice President of Women in Engineering (WiE) and a Senior Mentor for Women in Science and Engineering (WiSE) at Griffith, I've helped lead and organise large-scale events like the annual Engineering Gala and industry networking nights, which take communication, organisation and a lot of teamwork. Through team projects and hackathons, I've learnt how to collaborate under pressure, share ideas openly and bring out the best in the people around me. Cultural dance, yoga and Muay Thai have taught me resilience, discipline and adaptability, and growing up in Fiji and New Zealand has given me an open mind and a love for connecting with people from all walks of life. I'm passionate about mentoring others and supporting diversity in STEM.
           </p>
         </motion.div>
 
@@ -54,7 +54,7 @@ export default function KeySkillsAboutMe() {
               animate="visible"
               variants={grow_in_item}
               whileHover={shimmy.whileHover}
-              className="absolute w-[50%] -bottom-[14%] -left-[6%] z-10"
+              className="absolute w-[70%] -bottom-[25%] -left-[6%] z-10"
             />
           </div>
         </div>
@@ -62,13 +62,13 @@ export default function KeySkillsAboutMe() {
         {/*COLUMN 3 - About Me comes in frm the right, heading sits at the bottom*/}
         <motion.div initial="hidden" animate="visible" variants={pan_right} className="flex flex-col text-right">
           <p className="font-body text-blush text-[13px] leading-normal mb-4">
-            Hi, I'm Alpa Sahai (but you can call me Alpie)! I'm a Software Engineering (Honours) student at Griffith University, passionate about innovation, problem-solving and using technology to make a meaningful impact.
+            Hey, I'm Alpa Sahai (or Alpie as the “brand” goes) and I'm a Software Engineering (Honours) student at Griffith University, passionate about innovation, problem-solving and using technology to make a meaningful impact.
           </p>
           <p className="font-body text-blush text-[13px] leading-normal mb-4">
-            As a recipient of the ATSE Elevate: Boosting Women in STEM Scholarship, I've been lucky enough to connect with inspiring women leaders in STEM. My interests lie in software development and computer systems, especially in aviation technology, quantum computing and sustainability-focused innovation, where I hope to help build efficient and effective solutions to global challenges. I love working where hardware, software and people meet.
+            As a recipient of the ATSE Elevate: Boosting Women in STEM Scholarship, I've been lucky enough to connect with inspiring women leaders in STEM. My interests lie in embedded software and computer systems, especially in aviation technology and sustainability-focused innovation, where I hope to help build efficient and effective solutions to global challenges. I love working where hardware, software and people meet.
           </p>
           <p className="font-body text-blush text-[13px] leading-normal mb-4">
-            Outside of uni, you'll find me at cultural dance, yoga or Muay Thai, or drawing (every doodle on my main page is mine!). As a young woman from Fiji, I love exploring my own culture and learning about others, and those experiences have shaped me into someone resilient, adaptable and open-minded. I'm passionate about supporting diversity in STEM and building a future where technology benefits our society and our surroundings.
+            Outside of uni, you will almost always catch me yapping or doing some form of activity, whether that be dance, kickboxing, drawing, reading, or simply socialising with my friends! As a young woman born in Fiji and raised in New Zealand, I love exploring my own culture and learning about others, and those experiences have shaped me into someone resilient, adaptable and open-minded. I'm passionate about supporting diversity in STEM and building a future where technology benefits our society and our surroundings.
           </p>
           <p className="font-body text-blush text-[13px] leading-normal mb-4">
             I'm always keen to connect with industry professionals, mentors and peers who share a passion for innovation, collaboration and positive change, so feel free to reach out!

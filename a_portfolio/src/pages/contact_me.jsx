@@ -20,7 +20,7 @@ export default function ContactPage() {
     <div className="min-h-screen bg-maroon">
       <Navbar />
 
-      <div className="max-w-6xl mx-auto flex gap-10 px-10 py-10">
+      <div className="max-w-7.5xl mx-auto flex gap-10 px-10 py-10">
         <motion.div
           initial="hidden"
           animate="visible"
