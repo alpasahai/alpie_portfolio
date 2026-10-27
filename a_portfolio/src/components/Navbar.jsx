@@ -9,12 +9,12 @@ const links = [
 
 export default function Navbar() {
   return (
-    <nav className="flex justify-center items-center gap-10 py-8 font-nav text-blush text-2xl tracking-wide">
+    <nav className="flex justify-center items-center gap-3 py-5 text-base md:gap-10 md:py-8 md:text-2xl font-nav text-blush tracking-wide">
       {links.map((link, index) => (
-        <div key={link.name} className="flex items-center gap-10">
+        <div key={link.name} className="flex items-center gap-3 md:gap-10">
           <Link
             to={link.path}
-            className="transition-opacity duration-300 hover:opacity-40"
+            className="whitespace-nowrap transition-opacity duration-300 hover:opacity-40"
           >
             {link.name}
           </Link>

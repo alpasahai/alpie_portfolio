@@ -38,14 +38,14 @@ export default function ProjectsPage() {
     <div className="min-h-screen bg-maroon">
       <Navbar />
 
-      <div className="max-w-7.5xl mx-auto flex gap-10 px-10 py-10">
+      <div className="max-w-8xl mx-auto flex flex-col md:flex-row gap-10 px-6 md:px-10 py-10">
         <motion.div
           initial="hidden"
           animate="visible"
           variants={pan_left}
-          className="w-1/4"
+          className="md: w-1/4"
         >
-          <h1 className="font-heading text-rose text-8xl leading-[0.9] text-left">the<br />projects</h1>
+          <h1 className="font-heading text-rose text-8xl md:text-8xl leading-[0.9] md:leading-[0.9] text-left">the<br />projects</h1>
           <br></br>
           <br></br>
           <p className="font-body text-blush text-sm leading-relaxed">
@@ -57,7 +57,7 @@ export default function ProjectsPage() {
           variants={succession_container}
           initial="hidden"
           animate="visible"
-          className="grid grid-cols-3 gap-6 flex-1"
+          className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 flex-1"
         >
         {/*Mapping system for the project line up*/}
           {projects.map((project) => (
@@ -73,7 +73,7 @@ export default function ProjectsPage() {
               <img
                 src={project.image}
                 alt={project.name}
-                className="w-full h-80 object-cover border-2 border-rose"
+                className="w-full h-48 md:h-80 object-cover border-2 border-rose"
               />
               <p className="font-body text-blush text-center text-sm mt-2">
                 {project.name}<br />{project.lang}

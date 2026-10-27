@@ -16,11 +16,11 @@ export default function KeySkillsAboutMe() {
       <Navbar />
 
       {/*3 columns like the OG design: skills | polaroid | about me*/}
-      <div className="flex-1 w-full max-w-7.5xl mx-auto grid grid-cols-[1.2fr_1.1fr_1.2fr] gap-10 px-12 py-6">
+      <div className="flex-1 w-full max-w-8xl mx-auto grid grid-cols-1 md:grid-cols-[1.2fr_1.1fr_1.2fr] gap-10 px-6 md:px-12 py-6">
 
         {/*COLUMN 1 - Key Skills come in frm the left*/}
         <motion.div initial="hidden" animate="visible" variants={pan_left} className="flex flex-col">
-          <h1 className="font-heading text-rose text-8xl leading-[1.1] text-left">key skills</h1> 
+          <h1 className="font-heading text-rose text-6xl md:text-8xl leading-[1.1] md:leading-[1.1] text-left">key skills</h1> 
           <br></br>
 
           <h3 className="font-nav text-rose text-xl mb-1">• programming</h3>
@@ -35,7 +35,7 @@ export default function KeySkillsAboutMe() {
         </motion.div>
 
         {/*COLUMN 2 - polaroid with the little computer stuck to its corner*/}
-        <div className="flex items-center justify-center">
+        <div className="flex items-center justify-center px-6 mb-16 md:px-0 md:mb-0">
           {/*this wrapper hugs the polaroid, so the computer is positioned relative to IT*/}
           <div className="relative w-full">
             <motion.img
@@ -61,7 +61,7 @@ export default function KeySkillsAboutMe() {
         </div>
 
         {/*COLUMN 3 - About Me comes in frm the right, heading sits at the bottom*/}
-        <motion.div initial="hidden" animate="visible" variants={pan_right} className="mt-20 flex flex-col text-right">
+        <motion.div initial="hidden" animate="visible" variants={pan_right} className="md:mt-20 flex flex-col text-left md:text-right">
           <p className="font-body text-blush text-[13px] leading-normal mb-4">
             Hey, I'm Alpa Sahai (or Alpie as the “brand” goes) and I'm a Software Engineering (Honours) student at Griffith University, passionate about innovation, problem-solving and using technology to make a meaningful impact.
           </p>
@@ -76,7 +76,7 @@ export default function KeySkillsAboutMe() {
           </p>
           <br></br>
           <br></br>
-          <h1 className="font-heading text-rose text-8xl leading-[1.1] text-right">about me</h1>
+          <h1 className="order-first md:order-none mb-4 md:mb-0 font-heading text-rose text-6xl md:text-8xl leading-[1.1] md:leading-[1.1] text-left md:text-right">about me</h1>
         </motion.div>
       </div>
 

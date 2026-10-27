@@ -42,7 +42,7 @@ export default function MainPage() {
         variants={succession_container}
         initial="hidden"
         animate="visible"
-        className="relative mx-auto aspect-[2/1] w-[min(100%,calc((100vh-170px)*2))] [container-type:inline-size]"
+        className="relative mx-auto my-auto md:my-0 aspect-[2/1] w-[min(100%,calc((100vh-170px)*2))] [container-type:inline-size]"
       >
         {/*MAIN TITLE*/}
         <motion.h1

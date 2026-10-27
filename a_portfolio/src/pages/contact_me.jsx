@@ -73,16 +73,16 @@ export default function ContactPage() {
     <div className="min-h-screen bg-maroon flex flex-col">
       <Navbar />
 
-      <div className="flex-1 w-full max-w-7xl mx-auto grid grid-cols-[1.1fr_1fr] gap-16 px-12">
+      <div className="flex-1 w-full max-w-8xl mx-auto grid grid-cols-1 md:grid-cols-[1.1fr_1fr] gap-10 md:gap-16 px-4 md:px-12">
         {/*LEFT - the ripped paper enquiry sheet pans in frm the left*/}
         <motion.div
           initial="hidden"
           animate="visible"
           variants={pan_left}
-          className="bg-creme pt-24 pb-16 px-14 flex flex-col"
+          className="bg-creme pt-16 md:pt-24 pb-10 md:pb-16 px-6 md:px-14 flex flex-col"
           style={{ clipPath: ripped_edge }}
         >
-          <h2 className="font-heading text-7xl text-rose mb-8">enquiries</h2>
+          <h2 className="font-heading text-5xl md:text-7xl text-rose mb-8">enquiries</h2>
 
           {/*noValidate = turn off the browser's own popups so we can use OUR error checking*/}
           <form onSubmit={handleSubmit} noValidate className="flex flex-col gap-5 flex-1">
@@ -98,7 +98,7 @@ export default function ContactPage() {
             <button
               type="submit"
               disabled={sending}
-              className="self-center mt-2 bg-rose text-creme font-nav text-3xl px-20 py-2 transition-opacity hover:opacity-80 disabled:opacity-50 disabled:cursor-wait"
+              className="self-center mt-2 bg-rose text-creme font-nav text-3xl px-12 md:px-20 py-2 transition-opacity hover:opacity-80 disabled:opacity-50 disabled:cursor-wait"
             >
               {sending ? "Sending..." : "Submit"}
             </button>
@@ -110,19 +110,19 @@ export default function ContactPage() {
           initial="hidden"
           animate="visible"
           variants={pan_right}
-          className="flex flex-col items-end pt-10"
+          className="order-first md:order-none flex flex-col items-center md:items-end pt-4 md:pt-10"
         >
-          <h1 className="font-heading text-rose text-8xl leading-[0.8] text-right">
+          <h1 className="font-heading text-rose text-6xl md:text-8xl leading-[0.8] md:leading-[0.8] text-center md:text-right">
             contact
             <br />
             <span className="pr-4">me</span>
           </h1>
             <br></br>
-          <p className="font-body text-blush text-sm leading-relaxed text-right">
+          <p className="font-body text-blush text-sm leading-relaxed text-center md:text-right">
             Like what you see? Feel free to check out my LinkedIn and GitHub or send through an enquiry and I'll do my best to respond as soon as I can!!
           </p>
 
-          <div className="flex flex-col gap-6 mt-16 w-80 self-center">
+          <div className="flex flex-col gap-6 mt-8 md:mt-16 w-full max-w-xs md:w-80 self-center">
             {socials.map((social) => (
               <motion.a
                 key={social.name}
@@ -137,9 +137,12 @@ export default function ContactPage() {
             ))}
           </div>
 
-          <p className="font-body text-blush mt-auto pb-6">@alpie productions</p>
+          <p className="hidden md:block font-body text-blush mt-auto pb-6">@alpie productions</p>
         </motion.div>
       </div>
+
+      {/*phone-only footer (the desktop one lives in the right column)*/}
+      <p className="md:hidden text-center font-body text-blush py-6">@alpie productions</p>
 
       {/*THE MODAL - AnimatePresence lets it animate OUT when it closes, not just in*/}
       <AnimatePresence>
@@ -156,9 +159,9 @@ export default function ContactPage() {
               animate={{ scale: 1, rotate: 0, transition: { type: "spring", stiffness: 200, damping: 12 } }}
               exit={{ scale: 0.6, opacity: 0 }}
               onClick={(e) => e.stopPropagation()} //clicking the card itself shouldn't close it
-              className="bg-creme px-16 py-10 flex flex-col items-center gap-6 shadow-2xl"
+              className="bg-creme mx-4 px-8 md:px-16 py-10 flex flex-col items-center gap-6 shadow-2xl"
             >
-              <h3 className="font-heading text-6xl text-rose">
+              <h3 className="font-heading text-4xl md:text-6xl text-rose text-center">
                 {modal === "sent" ? "Message Sent!" : "Message Error (it's having a moment)!"}
               </h3>
               <p className="font-body text-rose text-center">
