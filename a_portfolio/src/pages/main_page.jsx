@@ -69,6 +69,7 @@ export default function MainPage() {
             alt={d.alt}
             variants={grow_in_item}
             whileHover={shimmy.whileHover}
+            whileTap={shimmy.whileHover}
             className="absolute z-10"
             style={{
               top: `${d.top}%`,

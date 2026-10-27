@@ -45,6 +45,7 @@ export default function KeySkillsAboutMe() {
               animate="visible"
               variants={grow_in_item}
               whileHover={shimmy.whileHover}
+              whileTap={shimmy.whileHover}
               className="w-full"
               style={{ rotate: 6 }}
             />
@@ -55,6 +56,7 @@ export default function KeySkillsAboutMe() {
               animate="visible"
               variants={grow_in_item}
               whileHover={shimmy.whileHover}
+              whileTap={shimmy.whileHover}
               className="absolute w-[70%] -bottom-[25%] -left-[6%] z-10"
             />
           </div>

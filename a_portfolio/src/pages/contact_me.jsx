@@ -110,15 +110,15 @@ export default function ContactPage() {
           initial="hidden"
           animate="visible"
           variants={pan_right}
-          className="order-first md:order-none flex flex-col items-center md:items-end pt-4 md:pt-10"
+          className="order-first md:order-none flex flex-col items-end pt-4 md:pt-10"
         >
-          <h1 className="font-heading text-rose text-6xl md:text-8xl leading-[0.8] md:leading-[0.8] text-center md:text-right">
+          <h1 className="font-heading text-rose text-6xl md:text-8xl leading-[0.8] md:leading-[0.8] text-right">
             contact
             <br />
             <span className="pr-4">me</span>
           </h1>
             <br></br>
-          <p className="font-body text-blush text-sm leading-relaxed text-center md:text-right">
+          <p className="font-body text-blush text-sm leading-relaxed text-right">
             Like what you see? Feel free to check out my LinkedIn and GitHub or send through an enquiry and I'll do my best to respond as soon as I can!!
           </p>
 
