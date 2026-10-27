@@ -20,7 +20,8 @@ export default function KeySkillsAboutMe() {
 
         {/*COLUMN 1 - Key Skills come in frm the left*/}
         <motion.div initial="hidden" animate="visible" variants={pan_left} className="flex flex-col">
-          <h2 className="font-heading text-6xl text-blush mb-6">key skills</h2>
+          <h1 className="font-heading text-rose text-8xl leading-[1.1] text-left">key skills</h1> 
+          <br></br>
 
           <h3 className="font-nav text-rose text-xl mb-1">• programming</h3>
           <p className="font-body text-blush text-[13px] leading-normal mb-5 pl-4">
@@ -60,7 +61,7 @@ export default function KeySkillsAboutMe() {
         </div>
 
         {/*COLUMN 3 - About Me comes in frm the right, heading sits at the bottom*/}
-        <motion.div initial="hidden" animate="visible" variants={pan_right} className="flex flex-col text-right">
+        <motion.div initial="hidden" animate="visible" variants={pan_right} className="mt-20 flex flex-col text-right">
           <p className="font-body text-blush text-[13px] leading-normal mb-4">
             Hey, I'm Alpa Sahai (or Alpie as the “brand” goes) and I'm a Software Engineering (Honours) student at Griffith University, passionate about innovation, problem-solving and using technology to make a meaningful impact.
           </p>
@@ -73,7 +74,9 @@ export default function KeySkillsAboutMe() {
           <p className="font-body text-blush text-[13px] leading-normal mb-4">
             I'm always keen to connect with industry professionals, mentors and peers who share a passion for innovation, collaboration and positive change, so feel free to reach out!
           </p>
-          <h2 className="font-heading text-6xl text-blush mt-auto">about me</h2>
+          <br></br>
+          <br></br>
+          <h1 className="font-heading text-rose text-8xl leading-[1.1] text-right">about me</h1>
         </motion.div>
       </div>
 
