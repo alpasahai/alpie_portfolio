@@ -43,9 +43,9 @@ export default function ProjectsPage() {
           initial="hidden"
           animate="visible"
           variants={pan_left}
-          className="md: w-1/4"
+          className="md:w-1/4"
         >
-          <h1 className="font-heading text-rose text-8xl md:text-8xl leading-[0.9] md:leading-[0.9] text-left">the<br />projects</h1>
+          <h1 className="font-heading text-rose text-6xl md:text-8xl leading-[0.9] md:leading-[0.9] text-left">the<br />projects</h1>
           <br></br>
           <br></br>
           <p className="font-body text-blush text-sm leading-relaxed">
