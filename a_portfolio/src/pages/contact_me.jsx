@@ -15,7 +15,7 @@ const ripped_edge =
   "polygon(0% 8%, 3% 7.2%, 6% 7.8%, 9% 6.9%, 12% 7.4%, 16% 6.2%, 19% 6.8%, 23% 5.9%, 26% 6.6%, 30% 5.4%, 34% 6.1%, 37% 5.2%, 41% 5.8%, 45% 4.9%, 48% 5.5%, 52% 4.6%, 56% 5.3%, 60% 4.2%, 63% 4.9%, 67% 3.8%, 71% 4.5%, 75% 3.4%, 78% 4.1%, 82% 3%, 86% 3.6%, 89% 2.4%, 92% 3.1%, 95% 1.8%, 97.5% 2.2%, 100% 1%, 100% 100%, 0% 100%)";
 
 //Empty form statte:
-const empty_form = { name: "", subject: "", message: "" };
+const empty_form = { name: "", email: "", subject: "", message: "" };
 
 export default function ContactPage() {
   const [form, setForm] = useState(empty_form); 
@@ -33,11 +33,12 @@ export default function ContactPage() {
   const validate = () => {
     const new_errors = {
       name: form.name.trim() === "",
+      email: !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email.trim()),
       subject: form.subject.trim() === "",
       message: form.message.trim() === "",
     };
     setErrors(new_errors);
-    return !new_errors.name && !new_errors.subject && !new_errors.message;
+    return !Object.values(new_errors).some(Boolean); //true only if NO box has an error
   };
 
   const handleSubmit = async (e) => {
@@ -49,7 +50,7 @@ export default function ContactPage() {
       await emailjs.send(
         import.meta.env.VITE_EMAILJS_SERVICE_ID,
         import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-        { name: form.name, subject: form.subject, message: form.message },
+        { name: form.name, email: form.email, subject: form.subject, message: form.message },
         { publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY }
       );
       setForm(empty_form); //clear the boxes
@@ -87,6 +88,7 @@ export default function ContactPage() {
           {/*noValidate = turn off the browser's own popups so we can use OUR error checking*/}
           <form onSubmit={handleSubmit} noValidate className="flex flex-col gap-5 flex-1">
             <input name="name" placeholder="Name" value={form.name} onChange={handleChange} className={boxStyle("name")} />
+            <input name="email" type="email" placeholder="Email" value={form.email} onChange={handleChange} className={boxStyle("email")} />
             <input name="subject" placeholder="Subject of Enquiry" value={form.subject} onChange={handleChange} className={boxStyle("subject")} />
             <textarea name="message" placeholder="Description" value={form.message} onChange={handleChange} className={`${boxStyle("message")} resize-none flex-1 min-h-[160px]`} />
 
@@ -142,7 +144,7 @@ export default function ContactPage() {
       </div>
 
       {/*phone-only footer (the desktop one lives in the right column)*/}
-      <p className="md:hidden text-center font-body text-blush py-6">@alpie productions</p>
+      <p className="md:hidden text-right font-body text-blush py-6">@alpie productions</p>
 
       {/*THE MODAL - AnimatePresence lets it animate OUT when it closes, not just in*/}
       <AnimatePresence>
