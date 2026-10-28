@@ -16,6 +16,7 @@ const ripped_edge =
 
 //Empty form statte:
 const empty_form = { name: "", email: "", subject: "", message: "" };
+const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; //meow@meow.cats
 
 export default function ContactPage() {
   const [form, setForm] = useState(empty_form); 
@@ -31,9 +32,10 @@ export default function ContactPage() {
 
   //Error checking so returns true only if every box has something in it
   const validate = () => {
+    const email = form.email.trim();
     const new_errors = {
       name: form.name.trim() === "",
-      email: !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email.trim()),
+      email: email === "" ? "missing" : !EMAIL_PATTERN.test(email) ? "invalid" : false,
       subject: form.subject.trim() === "",
       message: form.message.trim() === "",
     };
@@ -92,9 +94,14 @@ export default function ContactPage() {
             <input name="subject" placeholder="Subject of Enquiry" value={form.subject} onChange={handleChange} className={boxStyle("subject")} />
             <textarea name="message" placeholder="Description" value={form.message} onChange={handleChange} className={`${boxStyle("message")} resize-none flex-1 min-h-[160px]`} />
 
-            {/*Only shows up if something is missing*/}
-            {(errors.name || errors.subject || errors.message) && (
+            {/*Missing boxes, now including email*/}
+            {(errors.name || errors.subject || errors.message || errors.email === "missing") && (
               <p className="font-body text-red-600 text-sm -mt-2">Please fill in all the boxes before sending!</p>
+            )}
+
+            {/*Only when something was typed but it isn't a real email*/}
+            {errors.email === "invalid" && (
+              <p className="font-body text-red-600 text-sm -mt-2">Please use a valid email!</p>
             )}
 
             <button
